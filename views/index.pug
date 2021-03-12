@@ -1,0 +1,38 @@
+h3  Books 
+#bookl  
+
+
+h3  Videos 
+#vids
+
+script.
+  var list = document.getElementById('bookl');
+
+  var books = !{JSON.stringify(booki)};
+  var i;
+  for (i = 0; i < books.length; i++) {
+  var divt = document.getElementById('bookl');
+  var entry = document.createElement('a');
+  entry.setAttribute("href", "/bibi/?book="+books[i]);
+  entry.innerHTML = books[i];
+  divt.appendChild(entry);
+
+  var br = document.createElement('br');
+  divt.appendChild(br);
+  }
+
+
+  var list = document.getElementById('vids');
+
+  var vids = !{JSON.stringify(vidi)};
+  var i;
+  for (i = 0; i < vids.length; i++) {
+  var divt = document.getElementById('vids');
+  var entry = document.createElement('a');
+  entry.setAttribute("href", "videos/"+vids[i]);
+  entry.innerHTML = vids[i];
+  divt.appendChild(entry);
+
+  var br = document.createElement('br');
+  divt.appendChild(br);
+  }
