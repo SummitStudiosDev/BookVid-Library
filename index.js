@@ -2,13 +2,24 @@ const express = require('express');
 var path = require('path');
 var fs = require('fs');
 
+
+
+//create folders if not exist
+if (!fs.existsSync("bibi-bookshelf/")) {
+    fs.mkdirSync("bibi-bookshelf/");
+}
+
+if (!fs.existsSync("videos/")) {
+    fs.mkdirSync("videos/");
+}
+
+
+
 const app = express();
 app.use(express.static(__dirname))
 app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
-
-
 
   var bookp = path.join(__dirname, 'bibi-bookshelf');
   let bookl = [];
